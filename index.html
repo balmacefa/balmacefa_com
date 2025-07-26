@@ -2,10 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
       Fabián Martín Balmaceda Rescia | Consultor Técnico en Infraestructura IT
     </title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,6 +16,13 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
     <style>
       body {
         font-family: "Segoe UI", sans-serif;
@@ -96,7 +105,7 @@
     <div class="container">
       <!-- Problemas comunes -->
       <section id="problemas">
-        <h2 class="section-title">
+        <h2 class="section-title" data-aos="fade-right">
           ¿Te identificas con alguno de estos problemas?
         </h2>
         <ul class="list-group list-group-flush mb-4">
@@ -125,7 +134,7 @@
 
       <!-- Beneficios -->
       <section id="beneficios">
-        <h2 class="section-title">¿Cómo puedo ayudarte?</h2>
+        <h2 class="section-title" data-aos="fade-right">¿Cómo puedo ayudarte?</h2>
         <div class="row text-center">
           <div class="col-md-4">
             <div class="icon"><i class="bi bi-lightning-charge-fill"></i></div>
@@ -161,7 +170,7 @@
 
       <!-- Servicios -->
       <section id="servicios">
-        <h2 class="section-title">Servicios Premium</h2>
+        <h2 class="section-title" data-aos="fade-right">Servicios Premium</h2>
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-box">
@@ -203,7 +212,7 @@
 
       <!-- Antes y Después -->
       <section id="antes-despues" class="my-5">
-        <h2 class="section-title">Antes vs Después</h2>
+        <h2 class="section-title" data-aos="fade-right">Antes vs Después</h2>
         <div class="row">
           <div class="col-md-6">
             <h5 class="text-danger">Antes</h5>
@@ -217,280 +226,83 @@
           <div class="col-md-6">
             <h5 class="text-success">Después</h5>
             <ul>
-              <li>✅ Deploys automatizados en minutos</li>
-              <li>✅ Observabilidad completa en tiempo real</li>
-              <li>✅ Arquitectura escalable y robusta</li>
-              <li>✅ Optimización de recursos y gastos</li>
+              <li>✔️ Infraestructura automatizada con CI/CD</li>
+              <li>✔️ Monitorización completa y alertas</li>
+              <li>✔️ Arquitectura escalable y resiliente</li>
+              <li>✔️ Costos optimizados y controlados</li>
             </ul>
           </div>
         </div>
       </section>
 
       <!-- Testimonios -->
-      <section id="testimonios">
-        <h2 class="section-title">Testimonios Reales</h2>
-        <div class="row">
-          <div class="col-md-6 mb-4">
-            <blockquote class="blockquote">
-              <p>
-                "Gracias a Fabian desplegamos en Kubernetes en 2 días lo que
-                antes tomaba semanas."
-              </p>
-              <footer class="blockquote-footer">
-                Luis Vega, CTO en Fintech LATAM
-              </footer>
-            </blockquote>
-          </div>
-          <div class="col-md-6 mb-4">
-            <blockquote class="blockquote">
-              <p>
-                "Mejoramos el uptime de 96% a 99.99% en menos de un mes. Su
-                enfoque es estratégico y técnico."
-              </p>
-              <footer class="blockquote-footer">
-                Andrea Campos, DevOps Lead en SaaS Health
-              </footer>
-            </blockquote>
-          </div>
-        </div>
+      <section id="testimonios" class="mb-5">
+        <h2 class="section-title" data-aos="fade-right">Testimonios Reales</h2>
+        <blockquote class="blockquote">
+          <p>
+            "Gracias a Fabián, nuestra infraestructura es estable y confiable.
+            Su asesoría fue clave para nuestro crecimiento."
+          </p>
+          <footer class="blockquote-footer">Cliente Satisfecho</footer>
+        </blockquote>
       </section>
 
-      <!-- Formulario de contacto -->
-      <section id="contacto">
-        <h2 class="section-title">Solicita una Consultoría</h2>
-        <p>
-          Completa el formulario y te responderé en menos de 24 horas
-          personalmente.
-        </p>
-        <form class="row g-3">
-          <div class="col-md-6">
+      <!-- Contacto -->
+      <section id="contacto" class="mb-5">
+        <h2 class="section-title" data-aos="fade-right">Contáctame</h2>
+        <form>
+          <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" required />
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              placeholder="Tu nombre"
+            />
           </div>
-          <div class="col-md-6">
+          <div class="mb-3">
             <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" required />
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="nombre@ejemplo.com"
+            />
           </div>
-          <div class="col-12">
-            <label for="mensaje" class="form-label"
-              >Describe tu reto técnico</label
-            >
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
             <textarea
               class="form-control"
               id="mensaje"
               rows="4"
-              required
+              placeholder="Escribe tu mensaje aquí"
             ></textarea>
           </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-lg">
-              Enviar mensaje
-            </button>
-          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
       </section>
-
-      <!-- FAQs -->
-      <!-- FAQs Mejorado -->
-      <!-- FAQs Actualizado -->
-      <!-- FAQs -->
-      <section id="faqs" class="mt-5">
-        <h2 class="section-title">Preguntas Frecuentes</h2>
-        <div class="accordion" id="faqAccordion">
-          <!-- FAQ 1 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq1">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq1-content"
-                aria-expanded="true"
-                aria-controls="faq1-content"
-              >
-                🛠️ ¿Cuál es el costo de una consultoría?
-              </button>
-            </h2>
-            <div
-              id="faq1-content"
-              class="accordion-collapse collapse show"
-              aria-labelledby="faq1"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Desde $500 USD por un diagnóstico inicial, que incluye plan de
-                trabajo y áreas de mejora. Para trabajos continuos de
-                acompañamiento y ejecución, el precio parte desde $2000 USD por
-                mes.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq2">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq2-content"
-                aria-expanded="false"
-                aria-controls="faq2-content"
-              >
-                📞 ¿Cuál es el proceso de onboarding?
-              </button>
-            </h2>
-            <div
-              id="faq2-content"
-              class="accordion-collapse collapse"
-              aria-labelledby="faq2"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Se agenda una videollamada inicial para exponer las
-                problemáticas, casos técnicos y de negocio. Luego se crea un
-                documento base y se envía una propuesta para aprobación o
-                ajustes. Se recopila información de contactos clave
-                (facturación, técnicos, etc.), se crea un canal de comunicación,
-                y se coordinan fechas y entregables.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq3">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq3-content"
-                aria-expanded="false"
-                aria-controls="faq3-content"
-              >
-                💬 ¿Cómo nos comunicamos y documentamos el trabajo?
-              </button>
-            </h2>
-            <div
-              id="faq3-content"
-              class="accordion-collapse collapse"
-              aria-labelledby="faq3"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Utilizo reuniones virtuales por la plataforma de tu preferencia
-                y toda la documentación se entrega por Google Docs, con
-                historial de cambios y colaboración en tiempo real.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq4">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq4-content"
-                aria-expanded="false"
-                aria-controls="faq4-content"
-              >
-                💳 ¿Qué medios de pago aceptas?
-              </button>
-            </h2>
-            <div
-              id="faq4-content"
-              class="accordion-collapse collapse"
-              aria-labelledby="faq4"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Acepto pagos vía Stripe. Puedes pagar mediante una suscripción
-                mensual o en un solo pago, según el tipo de servicio contratado.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq5">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq5-content"
-                aria-expanded="false"
-                aria-controls="faq5-content"
-              >
-                👥 ¿Trabajas solo o con un equipo?
-              </button>
-            </h2>
-            <div
-              id="faq5-content"
-              class="accordion-collapse collapse"
-              aria-labelledby="faq5"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Cuento con personal de apoyo para tareas repetitivas o de
-                documentación, así como especialistas en áreas técnicas
-                específicas cuando es necesario. Además, tengo un asistente
-                virtual personal que me ayuda a coordinar y mantener la
-                eficiencia operativa.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq6">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#faq6-content"
-                aria-expanded="false"
-                aria-controls="faq6-content"
-              >
-                🛡️ ¿Se firman contratos de confidencialidad o acuerdos legales?
-              </button>
-            </h2>
-            <div
-              id="faq6-content"
-              class="accordion-collapse collapse"
-              aria-labelledby="faq6"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Sí. Se firman contratos de confidencialidad (NDA), acuerdos de
-                privacidad de datos y cesión de derechos de autor a favor del
-                cliente, asegurando protección legal completa y profesionalismo.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
 
-    <!-- Floating CTA -->
-    <div class="floating-cta d-md-none">
-      <a href="#contacto" class="btn btn-primary btn-lg shadow"
-        >Agendar diagnóstico</a
-      >
+    <!-- Floating Call To Action -->
+    <div class="floating-cta">
+      <a
+        href="tel:+50660000000"
+        class="btn btn-primary rounded-circle p-3 shadow"
+        ><i class="bi bi-telephone-fill fs-4"></i
+      ></a>
     </div>
 
-    <!-- Footer -->
-    <footer class="text-center mt-5">
-      <p>
-        &copy; 2025 Fabián Martín Balmaceda Rescia | Consultor Técnico
-        Independiente
-      </p>
-      <p>
-        Email: fabianmartinbalmacedarescia@gmail.com | Tel: +(506) 7064-0928
-      </p>
-    </footer>
-
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: false, // Permite que la animación se repita cada vez que el elemento entra en viewport
+        mirror: true, // (Opcional) también anima los elementos cuando se hacen scroll hacia arriba
+      });
+    </script>
   </body>
 </html>
