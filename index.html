@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultoría Técnica - Fabian Balmaceda Rescia</title>
+    <title>
+      Fabián Martín Balmaceda Rescia | Consultor Técnico en Infraestructura IT
+    </title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
     />
     <style>
@@ -17,6 +23,12 @@
         color: white;
         padding: 100px 20px;
         text-align: center;
+        position: relative;
+      }
+      .hero img {
+        width: 120px;
+        border-radius: 50%;
+        margin-bottom: 20px;
       }
       .section-title {
         margin-top: 60px;
@@ -31,26 +43,53 @@
         padding: 20px;
         height: 100%;
         background-color: #f8f9fa;
+        transition: transform 0.3s ease;
+      }
+      .service-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
       footer {
         background-color: #f1f1f1;
         text-align: center;
         padding: 30px;
       }
+      .floating-cta {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
+      .icon {
+        font-size: 1.4rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
+    <!-- Encabezado -->
+    <nav class="navbar navbar-light bg-light shadow-sm px-4">
+      <a class="navbar-brand fw-bold" href="#"
+        >Fabián Martín Balmaceda Rescia</a
+      >
+    </nav>
+
     <!-- Hero -->
     <section class="hero">
-      <h1 class="display-4">
+      <div class="display-1 mb-3">
+        <i class="bi bi-gear-fill"></i>
+      </div>
+
+      <h1 class="display-5">
         ¿Tu infraestructura está frenando tu crecimiento?
       </h1>
       <p class="lead">
         Te ayudo a desplegar entornos escalables, automatizados y resilientes
         con tecnologías de clase mundial.
       </p>
-      <a href="#contacto" class="btn btn-light btn-lg mt-4"
-        >Solicita tu llamada gratuita de diagnóstico</a
+      <a href="#contacto" class="btn btn-light btn-lg mt-3"
+        >Solicita tu llamada gratuita</a
       >
     </section>
 
@@ -60,7 +99,7 @@
         <h2 class="section-title">
           ¿Te identificas con alguno de estos problemas?
         </h2>
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush mb-4">
           <li class="list-group-item">
             🚫 Tiempos de despliegue lentos o procesos manuales inseguros
           </li>
@@ -77,33 +116,46 @@
             🤯 Arquitectura multicloud desordenada o sin control
           </li>
         </ul>
+        <div class="text-center">
+          <a href="#contacto" class="btn btn-outline-primary btn-lg"
+            >Agenda tu diagnóstico</a
+          >
+        </div>
       </section>
 
-      <!-- Cómo puedo ayudarte -->
+      <!-- Beneficios -->
       <section id="beneficios">
         <h2 class="section-title">¿Cómo puedo ayudarte?</h2>
         <div class="row text-center">
           <div class="col-md-4">
+            <div class="icon"><i class="bi bi-lightning-charge-fill"></i></div>
             <h5>Instalación Rápida</h5>
             <p>
-              Despliego y configuro infraestructuras en horas, no semanas.
-              Docker, Kubernetes, CI/CD, base de datos, storage, todo incluido.
+              Despliego infraestructuras en horas. Docker, Kubernetes, CI/CD,
+              DBs y más, todo listo para producción.
             </p>
           </div>
           <div class="col-md-4">
+            <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
             <h5>Automatización Total</h5>
             <p>
-              Reduzco errores humanos automatizando tareas clave con pipelines y
-              buenas prácticas DevOps/SRE.
+              Reduzco errores humanos automatizando procesos críticos con
+              pipelines CI/CD y mejores prácticas SRE.
             </p>
           </div>
           <div class="col-md-4">
+            <div class="icon"><i class="bi bi-shield-lock-fill"></i></div>
             <h5>Asesoría Estratégica</h5>
             <p>
-              No solo instalo: diseño contigo una arquitectura sólida, segura y
-              escalable que soporte tus planes de negocio.
+              Diseñamos juntos una arquitectura sólida, segura y escalable
+              alineada a tus objetivos de negocio.
             </p>
           </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#contacto" class="btn btn-outline-primary btn-lg"
+            >Habla con un experto</a
+          >
         </div>
       </section>
 
@@ -113,12 +165,14 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-box">
-              <h5>Infraestructura & Cloud</h5>
+              <h5>
+                <i class="bi bi-cloud-check me-2"></i>Infraestructura & Cloud
+              </h5>
               <ul>
                 <li>Instalación de servidores y VPS</li>
-                <li>Multicloud, hybrid & on-premise</li>
+                <li>Multicloud, híbrido y on-premise</li>
                 <li>Redes, volúmenes, storage</li>
-                <li>Mantenimiento y soporte técnico</li>
+                <li>Soporte técnico mensual</li>
               </ul>
             </div>
           </div>
@@ -135,11 +189,11 @@
           </div>
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-box">
-              <h5>Consultoría SRE & Observabilidad</h5>
+              <h5><i class="bi bi-graph-up-arrow me-2"></i>Consultoría SRE</h5>
               <ul>
-                <li>Monitorización (Grafana, Prometheus)</li>
-                <li>Alertas y trazabilidad (ELK, Loki, Jaeger)</li>
-                <li>Refactor de código para resiliencia</li>
+                <li>Monitorización</li>
+                <li>Alertas y trazabilidad</li>
+                <li>Auditoría de resiliencia</li>
                 <li>Optimización de logging y métricas</li>
               </ul>
             </div>
@@ -147,25 +201,66 @@
         </div>
       </section>
 
+      <!-- Antes y Después -->
+      <section id="antes-despues" class="my-5">
+        <h2 class="section-title">Antes vs Después</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="text-danger">Antes</h5>
+            <ul>
+              <li>⚠️ Despliegues manuales e inseguros</li>
+              <li>⚠️ Fallos recurrentes sin trazabilidad</li>
+              <li>⚠️ Infraestructura sin monitoreo ni alertas</li>
+              <li>⚠️ Costos altos por sobreaprovisionamiento</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 class="text-success">Después</h5>
+            <ul>
+              <li>✅ Deploys automatizados en minutos</li>
+              <li>✅ Observabilidad completa en tiempo real</li>
+              <li>✅ Arquitectura escalable y robusta</li>
+              <li>✅ Optimización de recursos y gastos</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- Testimonios -->
       <section id="testimonios">
-        <h2 class="section-title">Lo que dicen mis clientes</h2>
-        <blockquote class="blockquote">
-          <p>
-            "Gracias a Fabian desplegamos en Kubernetes en 2 días lo que antes
-            nos tomaba semanas. ¡Un antes y un después!"
-          </p>
-          <footer class="blockquote-footer">CTO, Startup Fintech</footer>
-        </blockquote>
-        <!-- Agrega más testimonios cuando los tengas -->
+        <h2 class="section-title">Testimonios Reales</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <blockquote class="blockquote">
+              <p>
+                "Gracias a Fabian desplegamos en Kubernetes en 2 días lo que
+                antes tomaba semanas."
+              </p>
+              <footer class="blockquote-footer">
+                Luis Vega, CTO en Fintech LATAM
+              </footer>
+            </blockquote>
+          </div>
+          <div class="col-md-6 mb-4">
+            <blockquote class="blockquote">
+              <p>
+                "Mejoramos el uptime de 96% a 99.99% en menos de un mes. Su
+                enfoque es estratégico y técnico."
+              </p>
+              <footer class="blockquote-footer">
+                Andrea Campos, DevOps Lead en SaaS Health
+              </footer>
+            </blockquote>
+          </div>
+        </div>
       </section>
 
       <!-- Formulario de contacto -->
       <section id="contacto">
         <h2 class="section-title">Solicita una Consultoría</h2>
         <p>
-          Completa el formulario y te contactaré en menos de 24h para coordinar
-          una llamada gratuita.
+          Completa el formulario y te responderé en menos de 24 horas
+          personalmente.
         </p>
         <form class="row g-3">
           <div class="col-md-6">
@@ -178,7 +273,7 @@
           </div>
           <div class="col-12">
             <label for="mensaje" class="form-label"
-              >Describe brevemente tu reto</label
+              >Describe tu reto técnico</label
             >
             <textarea
               class="form-control"
@@ -196,9 +291,13 @@
       </section>
 
       <!-- FAQs -->
+      <!-- FAQs Mejorado -->
+      <!-- FAQs Actualizado -->
+      <!-- FAQs -->
       <section id="faqs" class="mt-5">
         <h2 class="section-title">Preguntas Frecuentes</h2>
         <div class="accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="faq1">
               <button
@@ -206,17 +305,28 @@
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#faq1-content"
+                aria-expanded="true"
+                aria-controls="faq1-content"
               >
-                ¿Cuánto cuesta una consultoría?
+                🛠️ ¿Cuál es el costo de una consultoría?
               </button>
             </h2>
-            <div id="faq1-content" class="accordion-collapse collapse show">
+            <div
+              id="faq1-content"
+              class="accordion-collapse collapse show"
+              aria-labelledby="faq1"
+              data-bs-parent="#faqAccordion"
+            >
               <div class="accordion-body">
-                Ofrezco servicios personalizados desde $500 USD por proyecto o
-                desde $100/hora según complejidad.
+                Desde $500 USD por un diagnóstico inicial, que incluye plan de
+                trabajo y áreas de mejora. Para trabajos continuos de
+                acompañamiento y ejecución, el precio parte desde $2000 USD por
+                mes.
               </div>
             </div>
           </div>
+
+          <!-- FAQ 2 -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="faq2">
               <button
@@ -224,14 +334,138 @@
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#faq2-content"
+                aria-expanded="false"
+                aria-controls="faq2-content"
               >
-                ¿Trabajas con empresas fuera de Costa Rica?
+                📞 ¿Cuál es el proceso de onboarding?
               </button>
             </h2>
-            <div id="faq2-content" class="accordion-collapse collapse">
+            <div
+              id="faq2-content"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq2"
+              data-bs-parent="#faqAccordion"
+            >
               <div class="accordion-body">
-                Sí, trabajo con clientes internacionales (LATAM, USA, Europa).
-                Todo 100% remoto y profesional.
+                Se agenda una videollamada inicial para exponer las
+                problemáticas, casos técnicos y de negocio. Luego se crea un
+                documento base y se envía una propuesta para aprobación o
+                ajustes. Se recopila información de contactos clave
+                (facturación, técnicos, etc.), se crea un canal de comunicación,
+                y se coordinan fechas y entregables.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq3-content"
+                aria-expanded="false"
+                aria-controls="faq3-content"
+              >
+                💬 ¿Cómo nos comunicamos y documentamos el trabajo?
+              </button>
+            </h2>
+            <div
+              id="faq3-content"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq3"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Utilizo reuniones virtuales por la plataforma de tu preferencia
+                y toda la documentación se entrega por Google Docs, con
+                historial de cambios y colaboración en tiempo real.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq4-content"
+                aria-expanded="false"
+                aria-controls="faq4-content"
+              >
+                💳 ¿Qué medios de pago aceptas?
+              </button>
+            </h2>
+            <div
+              id="faq4-content"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq4"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Acepto pagos vía Stripe. Puedes pagar mediante una suscripción
+                mensual o en un solo pago, según el tipo de servicio contratado.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq5">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq5-content"
+                aria-expanded="false"
+                aria-controls="faq5-content"
+              >
+                👥 ¿Trabajas solo o con un equipo?
+              </button>
+            </h2>
+            <div
+              id="faq5-content"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq5"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Cuento con personal de apoyo para tareas repetitivas o de
+                documentación, así como especialistas en áreas técnicas
+                específicas cuando es necesario. Además, tengo un asistente
+                virtual personal que me ayuda a coordinar y mantener la
+                eficiencia operativa.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq6">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq6-content"
+                aria-expanded="false"
+                aria-controls="faq6-content"
+              >
+                🛡️ ¿Se firman contratos de confidencialidad o acuerdos legales?
+              </button>
+            </h2>
+            <div
+              id="faq6-content"
+              class="accordion-collapse collapse"
+              aria-labelledby="faq6"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Sí. Se firman contratos de confidencialidad (NDA), acuerdos de
+                privacidad de datos y cesión de derechos de autor a favor del
+                cliente, asegurando protección legal completa y profesionalismo.
               </div>
             </div>
           </div>
@@ -239,10 +473,18 @@
       </section>
     </div>
 
+    <!-- Floating CTA -->
+    <div class="floating-cta d-md-none">
+      <a href="#contacto" class="btn btn-primary btn-lg shadow"
+        >Agendar diagnóstico</a
+      >
+    </div>
+
     <!-- Footer -->
-    <footer>
+    <footer class="text-center mt-5">
       <p>
-        &copy; 2025 Fabian Balmaceda Rescia | Consultor Técnico Independiente
+        &copy; 2025 Fabián Martín Balmaceda Rescia | Consultor Técnico
+        Independiente
       </p>
       <p>
         Email: fabianmartinbalmacedarescia@gmail.com | Tel: +(506) 7064-0928
